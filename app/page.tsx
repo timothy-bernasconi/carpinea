@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Hero from "@/components/Hero";
-import Gallery from "@/components/Gallery";
-import { photos } from "@/lib/photos";
+import GallerySection from "@/components/GallerySection";
 
 const facts: [string, string][] = [
   ["Livraison", "T2.2028 / T3.2028"], ["Villas contemporaines", "3"], ["Typologie", "6 pièces"],
@@ -46,7 +45,7 @@ export default function Projet() {
         title="L’élégance de villas contemporaines au cœur d’un quartier résidentiel recherché."
         cta={{ label: "Découvrir le projet", href: "/villas" }}
         image="/img/villa-b.jpg" position="50% 68%"
-        aside={<>T. +41 22 339 37 66<br />Chemin des Cherpines 12, Plan-les-Ouates<br />E. villas-carpinea@rosset.ch</>}
+        aside={<><span className="k">Téléphone</span><span>+41 22 339 37 66</span><span className="k">Adresse</span><span>Chemin des Cherpines 12, Plan-les-Ouates</span><span className="k">E-mail</span><span>villas-carpinea@rosset.ch</span></>}
       />
       <section className="wrap">
         <dl className="facts">
@@ -73,12 +72,11 @@ export default function Projet() {
         <Link href="/villas" className="cta cta-dark">Découvrir le projet</Link>
       </section>
 
-      <section className="wrap" style={{ paddingBottom: "clamp(56px,9vw,120px)" }}><Gallery photos={photos} /></section>
-
       <section className="dark section"><div className="wrap">
         <h2>Les points forts des Villas Carpinea</h2>
         <ul className="points">{points.map((p) => <li key={p.t}><svg className="pt-i" viewBox="0 0 24 24" aria-hidden="true"><path d={p.d} /></svg>{p.t}</li>)}</ul>
       </div></section>
+      <GallerySection />
     </>
   );
 }

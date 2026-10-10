@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import GallerySection from "@/components/GallerySection";
 import SituationMap from "@/components/SituationMap";
 import { places } from "@/lib/places";
 
@@ -29,6 +30,7 @@ export default function Situation() {
           {more.map((b) => <article key={b.t} className="block"><h3>{b.t}</h3>{b.p.map((t) => <p key={t}>{t}</p>)}</article>)}
         </div>
       </section>
+      <GallerySection />
     </>
   );
 }

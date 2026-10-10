@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import GallerySection from "@/components/GallerySection";
 
 type Statut = "vendu" | "réservé" | "disponible";
 const villas: { n: string; sbp: string; utile: string; jardin: string; prix: string; statut: Statut }[] = [
@@ -70,6 +71,7 @@ export default function Villas() {
           ))}
         </div>
       </div></section>
+      <GallerySection />
     </>
   );
 }

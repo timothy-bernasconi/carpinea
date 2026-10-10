@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import GallerySection from "@/components/GallerySection";
 
 const steps: [string, string[]][] = [
   ["Projet du projet Villas Carpinea", ["Présentation du projet immobilier"]],
@@ -23,6 +24,7 @@ export default function Processus() {
           ))}
         </ol>
       </section>
+      <GallerySection />
     </>
   );
 }

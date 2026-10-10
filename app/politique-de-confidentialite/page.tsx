@@ -1,2 +1,3 @@
 import LegalPage from "@/components/LegalPage";
-export default function Page() { return <LegalPage title="Politique de confidentialité" />; }
+import { confidentialite } from "@/lib/legal";
+export default function Page() { return <LegalPage title="Politique de confidentialité" blocks={confidentialite} />; }
