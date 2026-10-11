@@ -42,10 +42,10 @@ p { margin: 0 0 1.1rem; }
   .nav { width: 100%; justify-content: space-between; gap: 8px; font-size: 12px; }
 }
 
-/* Hero : image en fond, hauteur plafonnée */
+/* Hero : image en fond, plein écran (les chiffres clés apparaissent en dessous) */
 .hero { position: relative; display: flex; align-items: flex-end; overflow: hidden; color: var(--blanc);
-  height: clamp(400px, 66svh, 660px); background: var(--vert); }
-.hero-short { height: clamp(260px, 36svh, 340px); }
+  height: 100vh; height: 100svh; min-height: 520px; background: var(--vert); }
+.hero-short { height: clamp(260px, 36svh, 340px); min-height: 0; }
 .hero img { object-fit: cover; }
 .hero::before { content: ""; position: absolute; inset: 0; z-index: 1;
   background: linear-gradient(to bottom, rgba(31,48,39,.5), transparent 30%), linear-gradient(to top, rgba(31,48,39,.78), rgba(31,48,39,.12) 60%); }
@@ -187,7 +187,7 @@ input[type="range"] { accent-color: var(--terra); width: 100%; max-width: 100%; 
   input[type="text"], input[type="email"], input[type="tel"], textarea { cursor: text; }
 }
 
-.points li .pt-i { display: block; width: 52px; height: 52px; margin-bottom: 1.1rem; fill: none; stroke: var(--terra); stroke-width: .75; stroke-linecap: round; stroke-linejoin: round; }
+.points li .pt-i { display: block; width: 56px; height: 56px; margin-bottom: 1.2rem; fill: none; stroke: var(--terra); stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
 
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .calc { max-width: 340px; }

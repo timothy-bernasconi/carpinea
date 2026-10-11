@@ -30,12 +30,12 @@ const blocks: { t: string; p: string[] }[] = [
 ];
 
 const points = [
-  { d: "M3 11.5 12 4l9 7.5M5.5 9.7V20h13V9.7M10 20v-5.5h4V20", t: "Architecture contemporaine" },
-  { d: "M9 5.5a2.6 2.6 0 1 1 0 5.2 2.6 2.6 0 0 1 0-5.2zM3.8 19c0-3 2.3-5 5.2-5s5.2 2 5.2 5M16.6 8.2a2.1 2.1 0 1 1 0 4.2M16.4 14.1c2.3.1 3.9 1.7 3.9 4.4", t: "Aménagement adapté aux familles" },
-  { d: "M12 3l2.3 6.7L21 12l-6.7 2.3L12 21l-2.3-6.7L3 12l6.7-2.3z", t: "Finitions de qualité au gré du preneur" },
-  { d: "M12 8.3a3.7 3.7 0 1 1 0 7.4 3.7 3.7 0 0 1 0-7.4zM12 2.5V5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8", t: "Espaces de vie lumineux et ouverts sur le jardin" },
-  { d: "M12 3c3.5 0 5.6 2.5 5.6 5.3S15.300 13 12 13 6.400 11.100 6.400 8.300C6.400 5.500 8.500 3 12 3zM12 13v8M8.800 21h6.400", t: "Jardins privatifs généreux" },
-  { d: "M5 19C5 10.500 10 5 20 5c0 9-5 14-13 14zM5 19c3-5 6-8.500 10.500-10.500", t: "Construction au standard énergétique THPE" },
+  { d: "M6 40H42 M10 40V27H38V40 M16 27V16H34V27 M21 40V33H29V40", t: "Architecture contemporaine" },
+  { d: "M18 11a5 5 0 1 1 0 10 5 5 0 0 1 0-10z M8 40c0-7.5 4.5-13 10-13s10 5.5 10 13 M32 19a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7z M27 40c.5-5 2.5-8.5 5-8.5s4.5 3.5 5 8.5", t: "Aménagement adapté aux familles" },
+  { d: "M24 6c1 10 4 14 14 18-10 4-13 8-14 18-1-10-4-14-14-18C20 20 23 16 24 6z", t: "Finitions de qualité au gré du preneur" },
+  { d: "M24 18a6 6 0 1 1 0 12 6 6 0 0 1 0-12z M24 7v5 M24 36v5 M7 24h5 M36 24h5 M12 12l3.5 3.5 M32.5 32.5L36 36 M36 12l-3.5 3.5 M15.5 32.5L12 36", t: "Espaces de vie lumineux et ouverts sur le jardin" },
+  { d: "M24 6c7 0 11 5 11 11s-4 11-11 11-11-5-11-11S17 6 24 6z M24 28v14 M16 42h16", t: "Jardins privatifs généreux" },
+  { d: "M10 38C10 22 20 10 40 8c0 20-10 30-30 30z M10 38C18 28 26 20 33 15", t: "Construction au standard énergétique THPE" },
 ];
 
 export default function Projet() {
@@ -74,7 +74,7 @@ export default function Projet() {
 
       <section className="dark section"><div className="wrap">
         <h2>Les points forts des Villas Carpinea</h2>
-        <ul className="points">{points.map((p) => <li key={p.t}><svg className="pt-i" viewBox="0 0 24 24" aria-hidden="true"><path d={p.d} /></svg>{p.t}</li>)}</ul>
+        <ul className="points">{points.map((p) => <li key={p.t}><svg className="pt-i" viewBox="0 0 48 48" aria-hidden="true"><path d={p.d} /></svg>{p.t}</li>)}</ul>
       </div></section>
       <GallerySection />
     </>
