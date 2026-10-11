@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import GallerySection from "@/components/GallerySection";
 
@@ -9,6 +10,11 @@ const steps: [string, string[]][] = [
   ["Signature des quote-parts", ["Signature de l’acte de vente (quote-part terrain) chez le notaire.", "Signature du contrat avec l’Entreprise générale (EG).", "Versement du 1er appel de fonds."]],
   ["Phase de construction", ["Validation des plans d’aménagement et choix des finitions"]],
 ];
+
+export const metadata: Metadata = {
+  title: "Processus de vente",
+  description: "De la présentation du projet à la remise des clés : les étapes d’achat de votre villa, du pré-accord de financement à la signature chez le notaire.",
+};
 
 export default function Processus() {
   return (

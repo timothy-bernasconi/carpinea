@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import GallerySection from "@/components/GallerySection";
 import SituationMap from "@/components/SituationMap";
@@ -11,6 +12,11 @@ const more = [
     "Les équipements sportifs du secteur et les itinéraires de promenade vers la campagne genevoise offrent de nombreuses possibilités pour bouger, se retrouver ou simplement prendre l’air.",
     "Aux Cherpines, de nouveaux équipements publics viendront compléter cette offre, parmi lesquels un futur centre sportif et culturel." ] },
 ];
+
+export const metadata: Metadata = {
+  title: "Situation aux Cherpines, Plan-les-Ouates",
+  description: "Un quartier résidentiel recherché et bien connecté : tram 15, commerces, crèche et école à proximité, Lancy-Pont-Rouge et l’aéroport de Genève.",
+};
 
 export default function Situation() {
   return (

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import GallerySection from "@/components/GallerySection";
 
@@ -22,6 +23,11 @@ const levels: { t: string; s?: string; b: string[] }[] = [
     "Six places de stationnement voitures au total : trois couvertes et trois non couvertes.", "Six places vélos privées.", "Trois places vélos communes.",
     "Deux emplacements pour vélos spéciaux.", "Une place moto." ] },
 ];
+
+export const metadata: Metadata = {
+  title: "Les villas A, B et C",
+  description: "Trois villas de 6 pièces, de 141 à 143 m² de surface brute de plancher, jardins privatifs de 117 à 412 m², dès CHF 2’190’000.",
+};
 
 export default function Villas() {
   return (

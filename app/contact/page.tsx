@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import ContactForm from "@/components/ContactForm";
 
@@ -5,6 +6,11 @@ const partners: [string, string][] = [
   ["Développeur foncier", "GREIT SA"], ["Architectes", "KL Architectes"], ["Commercialisation", "Rosset & Cie SA"],
   ["Entreprise générale", "Effibat SA"], ["Étude notariale", "Étude Ducret Associés"], ["Établissement bancaire", "Banque Migros"],
 ];
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Une question sur les Villas Carpinea ? Écrivez à l’équipe de vente de Rosset & Cie SA ou appelez le +41 22 339 37 66.",
+};
 
 export default function Contact() {
   return (

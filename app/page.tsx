@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Hero from "@/components/Hero";
@@ -37,6 +38,11 @@ const points = [
   { d: "M24 6c7 0 11 5 11 11s-4 11-11 11-11-5-11-11S17 6 24 6z M24 28v14 M16 42h16", t: "Jardins privatifs généreux" },
   { d: "M10 38C10 22 20 10 40 8c0 20-10 30-30 30z M10 38C18 28 26 20 33 15", t: "Construction au standard énergétique THPE" },
 ];
+
+export const metadata: Metadata = {
+  title: { absolute: "Villas Carpinea | Villas contemporaines à Plan-les-Ouates" },
+  description: "Trois villas contemporaines de 6 pièces aux Cherpines, à Plan-les-Ouates (Genève). Jardins privatifs, standard THPE, dès CHF 2’190’000.",
+};
 
 export default function Projet() {
   return (
