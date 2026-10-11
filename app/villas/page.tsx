@@ -2,10 +2,10 @@ import Hero from "@/components/Hero";
 import GallerySection from "@/components/GallerySection";
 
 type Statut = "vendu" | "réservé" | "disponible";
-const villas: { n: string; sbp: string; utile: string; jardin: string; prix: string; statut: Statut }[] = [
-  { n: "Villa A", sbp: "141", utile: "212", jardin: "117", prix: "CHF 2’190’000.-", statut: "disponible" },
-  { n: "Villa B", sbp: "141", utile: "212", jardin: "375", prix: "CHF 2’280’000.-", statut: "disponible" },
-  { n: "Villa C", sbp: "143", utile: "230", jardin: "412", prix: "CHF 2’390’000.-", statut: "disponible" },
+const villas: { n: string; sbp: string; utile: string; veranda: string; jardin: string; prix: string; statut: Statut }[] = [
+  { n: "Villa A", sbp: "141", utile: "212", veranda: "14,10", jardin: "117", prix: "CHF 2’190’000.-", statut: "disponible" },
+  { n: "Villa B", sbp: "141", utile: "212", veranda: "14,10", jardin: "375", prix: "CHF 2’280’000.-", statut: "disponible" },
+  { n: "Villa C", sbp: "143", utile: "230", veranda: "10,50", jardin: "412", prix: "CHF 2’390’000.-", statut: "disponible" },
 ];
 
 const levels: { t: string; s?: string; b: string[] }[] = [
@@ -26,7 +26,7 @@ const levels: { t: string; s?: string; b: string[] }[] = [
 export default function Villas() {
   return (
     <>
-      <Hero title="Des espaces adaptés à votre vie de famille" cta={{ label: "Découvrir votre future villa", href: "#tableau" }} image="/img/villa-a.jpg" position="50% 60%" />
+      <Hero title="Des espaces adaptés à votre vie de famille" cta={{ label: "Découvrir votre future villa", href: "#tableau" }} image="/img/salon-03.jpg" position="50% 60%" />
       <section className="section wrap">
         <div className="measure">
           <h2>Des villas pensées pour grandir avec vous</h2>
@@ -39,13 +39,13 @@ export default function Villas() {
         <div className="table-scroll">
           <table>
             <thead><tr>
-              <th>Villa</th><th>Pièces</th><th>Surface SBP (*)</th><th>Surface utile</th><th>Surface jardin</th>
+              <th>Villa</th><th>Pièces</th><th>Surface SBP (*)</th><th>Surface utile</th><th>Surface véranda (1)</th><th>Surface jardin</th>
               <th>Nbre parking</th><th>Prix de vente</th><th>Plan</th><th>Statut</th>
             </tr></thead>
             <tbody>
               {villas.map((v) => (
                 <tr key={v.n}>
-                  <th scope="row">{v.n}</th><td>6</td><td>{v.sbp} m²</td><td>{v.utile} m²</td><td>{v.jardin} m²</td>
+                  <th scope="row">{v.n}</th><td>6</td><td>{v.sbp} m²</td><td>{v.utile} m²</td><td>{v.veranda} m²</td><td>{v.jardin} m²</td>
                   <td>2</td><td>{v.prix}</td><td>À venir</td>
                   <td><span className={`dot ${v.statut === "réservé" ? "reserve" : v.statut}`} />{v.statut[0].toUpperCase() + v.statut.slice(1)}</td>
                 </tr>
@@ -53,7 +53,7 @@ export default function Villas() {
             </tbody>
           </table>
         </div>
-        <p className="note">(*) Surface Brute de Plancher</p>
+        <p className="note">(*) Surface Brute de Plancher<br />(1) Véranda en option</p>
       </section>
 
       <section className="dark section"><div className="wrap">

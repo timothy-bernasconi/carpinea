@@ -9,7 +9,7 @@ const partners: [string, string][] = [
 export default function Contact() {
   return (
     <>
-      <Hero title="Parlons de votre future villa" cta={{ label: "Contactez notre équipe vente", href: "#formulaire" }} image="/img/salon-02.jpg" position="50% 55%" />
+      <Hero title="Parlons de votre future villa" cta={{ label: "Contactez notre équipe vente", href: "#formulaire" }} image="/img/chambre-parentale.jpg" position="50% 55%" />
       <section id="formulaire" className="section wrap">
         <div className="measure" style={{ marginBottom: "2.6rem" }}>
           <h2>Parlons de votre future villa.</h2>

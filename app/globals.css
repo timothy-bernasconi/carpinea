@@ -29,7 +29,9 @@ p { margin: 0 0 1.1rem; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 
 /* Header */
-.header { position: absolute; inset: 0 0 auto 0; z-index: 5; color: var(--blanc); }
+.header { position: fixed; inset: 0 0 auto 0; z-index: 5; color: var(--blanc); transition: background-color .3s ease; }
+.header.is-scrolled { background: var(--vert); }
+html { scroll-padding-top: 84px; }
 .header .wrap { display: flex; align-items: center; justify-content: space-between; height: 84px; }
 .logo { display: block; width: clamp(120px, 12vw, 168px); } .logo img { width: 100%; height: auto; }
 .nav { display: flex; gap: clamp(14px, 2.6vw, 38px); font-size: 13px; }
@@ -40,6 +42,7 @@ p { margin: 0 0 1.1rem; }
   .header .wrap { flex-direction: column; align-items: flex-start; justify-content: center; gap: 10px; height: auto; padding-top: 14px; padding-bottom: 12px; }
   .logo { width: 112px; }
   .nav { width: 100%; justify-content: space-between; gap: 8px; font-size: 12px; }
+  html { scroll-padding-top: 84px; }
 }
 
 /* Hero : image en fond, plein écran (les chiffres clés apparaissent en dessous) */
@@ -204,3 +207,15 @@ input[type="range"] { accent-color: var(--terra); width: 100%; max-width: 100%; 
 /* Galerie : espace sous le bloc précédent (aussi après un bandeau vert) et avant le pied de page */
 .gal-sec { padding-bottom: clamp(56px, 9vw, 120px); }
 .dark + .gal-sec { padding-top: clamp(56px, 9vw, 120px); }
+
+/* Carte MapLibre : repères sans cadre, info-bulle au survol */
+.map-box { position: relative; }
+.map-box .map-off { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; padding: 2rem; text-align: center; font-size: 14px; background: #e6e0d1; }
+.map .maplibregl-canvas { outline: none; }
+.map .maplibregl-ctrl-group { border-radius: 0; box-shadow: 0 1px 6px rgba(44,34,28,.18); }
+.map .maplibregl-ctrl-group button { color: var(--vert); }
+.map .maplibregl-ctrl-attrib { font-size: 10px; background: rgba(243,239,228,.85); }
+.pin { position: relative; display: block; padding: 0; border: 0; background: none; line-height: 0; filter: drop-shadow(0 2px 3px rgba(44,34,28,.28)); }
+.pin svg { display: block; }
+.pin::after { content: attr(data-name); position: absolute; left: 50%; bottom: 100%; transform: translate(-50%, -6px); white-space: nowrap; font: 12px/1 var(--font-museo), system-ui, sans-serif; color: var(--chocolat); background: var(--blanc); padding: 6px 10px; box-shadow: 0 1px 6px rgba(44,34,28,.2); opacity: 0; pointer-events: none; transition: opacity .2s; line-height: 1; }
+.pin:hover::after, .pin:focus-visible::after { opacity: 1; }
